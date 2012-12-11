@@ -1,0 +1,28 @@
+<div class="hero-unit">
+  <h1>bigv.io pricing calculator</h1>
+  <p>A better pricing tool for Bytemark's bigvio cloud hosting service.</p>
+</div>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <h2>Macine Config</h2>
+        <form ng-model="vm" class="form-horizontal">
+            <div class="control-group">
+                <label for="ram" class="control-label">Ram</label>
+                <div class="controls">
+                    <input type="number" id="ram" step="1", min="{{min_ram()}}" ng-model="vm.ram" value="{{vm.ram}}" ng-change="{{change()}}"></input>GiB
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="cores" class="control-label">Processor Cores</label>
+                <div class="controls">
+                    <input type="number" id="cores" step="1", min="1" ng-model="vm.cores" ng-min="{{min_cores()}}" value="{{vm.cores}}" ng-change="{{change()}}"></input>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <label for="price">Price</label><input type="money" id="price" value="{{vm.price()}}"> 
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
