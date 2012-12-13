@@ -36,20 +36,30 @@
             </div>
         </div>
         <div class="container" ng-view></div>
-
+        <footer class="footer">
+            <div class="container">
+                <p>Made by <a href="http://www.twitter.com/r4vi">@r4vi</a></p>
+                <p>Pricing out of date? Tweet me.</p>
+            </div>
+        </footer>
         <script src="scripts/vendor/angular.js"></script>
 
         <!-- build:js scripts/scripts.js -->
+        <script src="components/jquery/jquery.js"></script>
+        <script src="components/bootstrap-js/bootstrap.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-599427-14'],['_setDomainName','pckl.me'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
+    </script>
+    <script>
+        $('[rel=tooltip]').tooltip();
+    </script>
     </body>
 </html>

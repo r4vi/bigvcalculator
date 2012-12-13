@@ -10,4 +10,8 @@ var bigvioCalculatorApp = angular.module('bigvioCalculatorApp', [])
       .otherwise({
         redirectTo: '/'
       });
-  }]);
+  }]).directive('bigvTooltip',function(){
+      return function(scope,element,attrs) {
+          $(element).tooltip();
+      }
+  });
