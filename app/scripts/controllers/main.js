@@ -21,19 +21,21 @@ bigvioCalculatorApp.controller('MainCtrl', ['$scope', function($scope, $location
         return total;
     },
   };
-  $scope.change_cores = function (){
+
+  $scope.$watch('vm.cores', function(newVal, oldVal){
+
       // set ram to match minimum for no cores. so if you add cores
       // you get the right amount of ram
-      if ($scope.vm.cores > ($scope.vm.ram / 4)) {
-        $scope.vm.ram = (($scope.vm.cores - 1) * 4)||1;
+      if (newVal > ($scope.vm.ram / 4)) {
+        $scope.vm.ram = ((newVal - 1) * 4)||1;
         return;
       }
-      if ($scope.vm.cores < (($scope.vm.ram +1)/ 4)) {
-        $scope.vm.ram = (($scope.vm.cores - 1) * 4)||1;
+      if (newVal < (($scope.vm.ram +1)/ 4)) {
+        $scope.vm.ram = ((newVal - 1) * 4)||1;
       }
+  }, false);
 
-  }
-  $scope.change_ram = function (){
+  $scope.$watch('vm.ram', function (newVal){
       // handle the opposite case, if you add more ram, get right number of cores
       if ($scope.vm.ram > 60) {
           $scope.vm.cores = 16;
@@ -48,22 +50,10 @@ bigvioCalculatorApp.controller('MainCtrl', ['$scope', function($scope, $location
       if ($scope.vm.cores > (($scope.vm.ram)/4)) {
           $scope.vm.cores = Math.floor(($scope.vm.ram/4))+1;
       }
-  }
-  $scope.change = function() { 
-      if (!!event && !!event.target && !!event.target.id ) {
-          switch (event.target.id) {
-              case 'ram':
-                  $scope.change_ram();
-                  break;
-              case 'cores':
-                  $scope.change_cores();
-          }
-          // special case
-          // for when > 60GB
-          if ($scope.vm.ram >= 60) {
-              $scope.vm.cores = 16;
-          }
+      if (newVal >= 60) {
+          $scope.vm.cores = 16;
       }
-  };
+  }, false);
+
 }]);
 

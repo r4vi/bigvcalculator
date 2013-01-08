@@ -1,3 +1,5 @@
 temp
+*.swp
+dist/
 tags
 .sass-cache
