@@ -1,5 +1,5 @@
 temp
 *.swp
-dist/
 tags
 .sass-cache
+deploy.sh

@@ -1,0 +1,54 @@
+<div class="hero-unit">
+    <h1><a href="http://bigv.io">bigv.io</a> pricing calculator</h1>
+    <h2>A better pricing tool for <a href="http://www.bytemark.co.uk/">Bytemark's</a> bigvio cloud hosting service.</h2>
+</div>
+<div class="row-fluid">
+    <div class="span8 offset2">
+        <h2>Macine Config</h2>
+        <form ng-model="vm" class="form-horizontal">
+            <div class="control-group">
+                <label for="ram" class="control-label">Ram</label>
+                <div class="controls">
+                    <input type="number" id="ram" step="1", ng-model="vm.ram" min="1" max="180" value="{{vm.ram}}" ></input>GiB
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="cores" class="control-label">Processor Cores</label>
+                <div class="controls">
+                    <input type="number" id="cores" step="1", min="1" max="16" ng-model="vm.cores" value="{{vm.cores}}" ng-change="{{change()}}" title="Cores depend on the amount of RAM you have. For every multiple of 5GiB RAM you have, you get an extra core up to 16." data-bigv-tooltip data-placement="right"></input>
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="disk_normal" class="control-label">Disk Space</label>
+                <div class="controls">
+                    <input type="number" id="disk_normal" step="10", min="25" max="16000" ng-model="vm.disk.ordinary" value="{{vm.disk.ordinary}}" ng-change="{{change()}}"></input>GiB
+            </div></div>
+            <div class="control-group">
+                <label for="disk_fast" class="control-label">Fast Storage</label>
+                <div class="controls">
+                    <input type="number" id="disk_fast" step="5", min="0" ng-model="vm.disk.fast" value="{{vm.disk.fast}}" ng-change="{{change()}}"></input>GiB
+            </div></div>
+            <div class="control-group">
+                <label for="disk_ssd" class="control-label">SSD Storage</label>
+                <div class="controls">
+                    <input type="number" id="disk_ssd" step="0.5", min="0" ng-model="vm.disk.ssd" value="{{vm.disk.ssd}}" ng-change="{{change()}}"></input>GiB
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="data" class="control-label">Bandwidth</label>
+                <div class="controls" >
+                    <input type="number" id="data" step="50", min="200" ng-model="vm.data" value="{{vm.data}}" ng-change="{{change()}}" title="first 200GiB included." data-bigv-tooltip data-placement="right"></input>GiB
+                </div>
+            </div>
+            <div class="control-group">
+                <label for="price" class="control-label">Price</label>
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on">£</span>   
+                        <input type="number" id="price" value="{{vm.price()}}" readonly=readonly><span class="add-on">ex-VAT (p/m)</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
