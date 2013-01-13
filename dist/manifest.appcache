@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# Time: Tue Jan 08 2013 01:52:12 GMT+0000 (GMT)
+# Time: Sun Jan 13 2013 20:47:06 GMT+0000 (GMT)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/#/
@@ -21,13 +21,25 @@ CACHE MANIFEST
 #  configFile: /usr/lib/node_modules/yeoman/lib/support/confess.json
 
 CACHE:
+components/webshim/src/shims/combos/19.js
+components/webshim/src/shims/combos/23.js
+components/webshim/src/shims/combos/6.js
+components/webshim/src/shims/geolocation.js
+components/webshim/src/shims/mediaelement-swf.js
+components/webshim/src/shims/styles/shim.css
+components/webshim/src/shims/track.js
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/i18n/jquery.ui.datepicker-en-GB.js
+http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.24/jquery-ui.min.js
+http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js
 http://localhost:3501/app/images/glyphicons-halflings-white.png
 http://localhost:3501/app/images/glyphicons-halflings.png
+http://localhost:3501/components/webshim/src/shims/styles/details-arrows.png
+http://localhost:3501/components/webshim/src/shims/styles/forms.png
 http://localhost:3501/img/solid.png
 http://www.google-analytics.com/ga.js
-scripts/3a576037.scripts.js
+scripts/f4adac68.scripts.js
 scripts/vendor/d10639ae.angular.js
-styles/afe87a16.main.css
+styles/da0cef09.main.css
 
 NETWORK:
 *

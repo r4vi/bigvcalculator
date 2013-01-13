@@ -1,7 +1,20 @@
 {
-  "author": "",
-  "name": "",
+  "name": "bigvio-calculator",
   "version": "0.0.0",
-  "dependencies": {},
-  "devDependencies": {}
+  "description": "An angularjs dynamic pricing calculator for bytemark's bigvio cloud hosting service.",
+  "main": " ",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "yeoman test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/r4vi/bigvcalculator.git"
+  },
+  "author": "Ravi Kotecha",
+  "license": "WTFPL",
+  "readmeFilename": "README.markdown",
+  "gitHead": "dad618b56f2df7237ec834490e428ae974aac4a9"
 }

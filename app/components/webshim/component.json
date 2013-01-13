@@ -1,0 +1,38 @@
+{
+  "name": "webshim",
+  "description": "modular capability-based loading polyfill libary, which extends jQuery with HTML5 features in legacy browsers",
+  "version": "1.9.4pre",
+  "keywords": [
+    "webshims",
+    "polyfill",
+    "HTML5"
+  ],
+  "main": "./master/demos/js-webshim/minified/",
+  "homepage": "http://afarkas.github.com/webshim/demos/index.html",
+  "authors": [
+    "Alexander Farkas <info@corrupt-system.de>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aFarkas/webshim.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/aFarkas/webshim/master/MIT-LICENSE.txt"
+    }
+  ],
+  "dependencies": {
+    "jquery": ">=1.7.2",
+    "modernizr": ">=2.6.2"
+  },
+  "devDependencies": {
+    "grunt-css": ">=0.3.2",
+    "grunt-contrib-copy": ">=0.3.1",
+    "grunt": ">=0.3.1"
+  },
+  "gitHead": "01b61ef0b548233d68546c2c026b51f4b267c70a",
+  "readme": "[Webshims Lib](http://aFarkas.github.com/webshim/demos/index.html) - The polyfilling, capability based loading JavaScript Library\n================================\n\nFeatures\n------------------\n\nGeneral Principles:\n\n* HTML5 compliant: correctly and accurately implemented (HTML5) Markup-, JS- and DOM-APIs  \n* capability based loading: extremely lightweight in modern browsers\n* cross-browser support: All A-Graded browsers including latest version of Opera are tested\n* extendable: if we have not implemented a feature you want, you can easily implement it on your own\n\nImplemented Features:\n\n* HTML5 shiv and innerShiv solution including basic CSS-support\n* canvas\n* HTML5 form features including: constraint validation and form widgets (input[type=\"range\"], input[type=\"date\"], input[type=\"number\"], output, input[list]/datalist)\n* HTML5 audio/video/track implementation\n* interactive elements: summary/details\n* JSON (stringify and parse)\n* localStorage/sessionStorage\n* geolocation\n* ECMAScript 5 / JavaScript 1.8.5 features \n\n\nHow To Use\n------------------\n\n* Simply [download Webshims Lib](https://github.com/aFarkas/webshim/downloads) and put the js-webshim-folder in your project\n* Include the JavaScript:\n\n---------------\n\t<script src=\"js/jquery.js\"></script>\n\t<script src=\"js/Modernizr-yepnope.js\"></script> \n\t<script src=\"js-webshim/minified/polyfiller.js\"></script> \n\n\t<script> \n\t\t//load and implement all unsupported features \n\t\t$.webshims.polyfill();\n\t\t\n\t\t//or only load a specific feature\n\t\t//$.webshims.polyfill('geolocation json-storage');\n\t</script>\n---------------\n\n* Wait till everything has been loaded and then use it:\n\n--------------\n\t<script> \n\t\t$(function(){\n\t\t\t//work with JSON and localStorage \n\t\t\tvar userData = JSON.parse(localStorage.getItem('userData')) || {visits: 0};\n\t\t\t$('#visits').html(userData.visits);\n\t\t\t//...\n\t\t});\n\t</script>\n--------------\n\nMore information and demos [here](http://aFarkas.github.com/webshim/demos/index.html).\n\n\nLicense\n---------------------------------------\n\nThe Webshims Lib core is licensed under the [MIT-License](http://aFarkas.github.com/webshim/MIT-LICENSE.txt). Note: Webshims Lib uses many great third party scripts.\n\n\n\nQuestions?\n----------\n\nIf you have any questions, please feel free to ask them on the [Using jQuery Plugins\nforum](http://forum.jquery.com/using-jquery-plugins).\n\n**Please tag your questions with 'webshims' or 'polyfill'.**\n\nRelease 1.9.5\n----------\n\n- improve youtube playback with jarisplayer\n- fix position bug of error messages in nested overflow: scroll boxes\n- fix chrome issue with dynamically created required radio buttons\n- favorize custom validation message before vendor validation message\n\nRelease 1.9.4\n----------\n\n- improved rtmp handling for both Jaris and JW player\n- fixed bug on iOS in conjunction with input[type=date]\n- fixed creditcard validation\n- allow placeholder for type=number\n- show mediaelement fallback, if flash isn't installed and mediaelements aren't supported\n- a lot of improvements to the free and open source swf media player Jaris (we will switch to Jaris by default with next release)\n\n\nRelease 1.9.3\n----------\n\n- add option to use alternative jarisplayer as mediaelement fallback\n- fixed track[default] in IE10 (initial copying of track.mode)\n- implement .prop-checked in browsers, which do not support the :checked selector\n- implement .user-error selector\n- limit track.kind property using addTextTrack to only known values\n\nRelease 1.9.2\n----------\n\n- implemented input[type=\"time\"]\n- allow dynamically changing label/kind/srclang of existing track elements\n- added removeCue to texttrack API\n- added screenreader-support for track[kind=\"descriptions\"]\n- improved change events for input[type=range] and spinbutton controls (input[type=number])\n\nRelease 1.9.1\n----------\n\n- added onaddtrack/onremovetrack events to TextTrackList interface\n- datalist polyfill is now default for forms feature\n- added swedish locale (thx to @leon)\n- improved errorbubble style\n- updated JW player",
+  "readmeFilename": "readme.md",
+  "_id": "webshims@1.9.4pre"
+}
